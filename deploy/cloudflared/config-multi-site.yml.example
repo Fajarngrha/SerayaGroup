@@ -1,0 +1,23 @@
+# Contoh config multi-site (tunnel web-pi sudah ada)
+# Path: /home/fajar/.cloudflared/config.yml
+#
+# Site lama: fid-maintenance.online → port 3001
+# Site baru:  domain-seraya-anda.com  → port 3000
+
+tunnel: 6bed7d36-e77d-4651-94ed-24efde5485b1
+credentials-file: /home/fajar/.cloudflared/6bed7d36-e77d-4651-94ed-24efde5485b1.json
+
+ingress:
+  # Site lama (jangan dihapus jika masih dipakai)
+  - hostname: fid-maintenance.online
+    service: http://127.0.0.1:3001
+
+  # Website Seraya (ganti domain sesuai milik Anda)
+  - hostname: www.domain-seraya-anda.com
+    service: http://127.0.0.1:3000
+
+  - hostname: domain-seraya-anda.com
+    service: http://127.0.0.1:3000
+
+  # Wajib: catch-all paling bawah
+  - service: http_status:404

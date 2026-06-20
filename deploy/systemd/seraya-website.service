@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
-User=pi
-Group=pi
-WorkingDirectory=/home/pi/seraya-website
+User=fajar
+Group=fajar
+WorkingDirectory=/home/fajar/seraya/SerayaGroup
 Environment=NODE_ENV=production
 Environment=HOST=127.0.0.1
 Environment=PORT=3000
@@ -14,7 +14,6 @@ ExecStart=/usr/bin/node server.js
 Restart=on-failure
 RestartSec=5
 
-# Keamanan dasar
 NoNewPrivileges=true
 PrivateTmp=true
 
