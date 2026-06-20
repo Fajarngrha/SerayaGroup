@@ -1,0 +1,16 @@
+[Unit]
+Description=Cloudflare Tunnel - Seraya Website
+After=network-online.target seraya-website.service
+Wants=network-online.target
+Requires=seraya-website.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+ExecStart=/usr/local/bin/cloudflared tunnel --config /home/pi/.cloudflared/config.yml run
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

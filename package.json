@@ -1,0 +1,16 @@
+{
+  "name": "seraya-corporate-website",
+  "version": "1.0.0",
+  "description": "Corporate website for PT Sejahtera Raya Grup",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "start:prod": "NODE_ENV=production node server.js"
+  },
+  "keywords": ["corporate", "website", "seraya"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

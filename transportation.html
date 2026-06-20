@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seraya Transportation & Logistics - Armada lengkap sedan, bus, MPV, pick-up, mobil box, dan truk logistik. Request quote online.">
+  <title>Seraya Transportation | PT Sejahtera Raya Grup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <div class="logo__icon">SRG</div>
+        <span class="logo__text">PT Sejahtera<br>Raya Grup</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Beranda</a>
+        <a href="index.html#tentang" class="nav__link">Tentang Kami</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Layanan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a href="consulting.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#2563eb"></span> Seraya Consulting</a>
+            <a href="organizer.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#9333ea"></span> Seraya Organizer</a>
+            <a href="transportation.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#16a34a"></span> Seraya Transportation</a>
+            <a href="construction.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#eab308"></span> Seraya Construction</a>
+          </div>
+        </div>
+        <a href="kontak.html" class="nav__link">Kontak</a>
+      </nav>
+      <a href="kontak.html" class="btn btn--gold">Hubungi Kami</a>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container page-header__inner">
+      <div>
+        <div class="page-header__brand page-header__brand--transport">
+          <span>🚛</span> Seraya Transportation
+        </div>
+        <h1 class="page-header__title">Armada Lengkap & Logistik</h1>
+        <p class="page-header__desc">Solusi transportasi aman, tepat waktu, dengan armada lengkap untuk kebutuhan pribadi maupun bisnis.</p>
+      </div>
+      <div class="page-header__actions">
+        <a href="https://wa.me/6281234567893" target="_blank" class="btn btn--whatsapp">💬 WhatsApp</a>
+        <a href="mailto:transport@serayagroup.com" class="btn btn--outline">✉️ Email</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="fleet-header">
+        <h2 class="fleet-header__title">Katalog Armada</h2>
+        <div class="fleet-filters">
+          <button class="fleet-filter active" data-filter="all">Semua</button>
+          <button class="fleet-filter" data-filter="passenger">Penumpang</button>
+          <button class="fleet-filter" data-filter="logistics">Logistik</button>
+        </div>
+      </div>
+
+      <div class="fleet-grid">
+        <div class="fleet-card" data-category="passenger">
+          <span class="fleet-card__badge fleet-card__badge--passenger">Penumpang</span>
+          <div class="fleet-card__icon">🚗</div>
+          <h3 class="fleet-card__name">Sedan</h3>
+          <p class="fleet-card__models">Toyota Camry / Honda Accord</p>
+          <p class="fleet-card__capacity fleet-card__capacity--passenger">4 penumpang</p>
+        </div>
+        <div class="fleet-card" data-category="passenger">
+          <span class="fleet-card__badge fleet-card__badge--passenger">Penumpang</span>
+          <div class="fleet-card__icon">🚐</div>
+          <h3 class="fleet-card__name">MPV</h3>
+          <p class="fleet-card__models">Toyota Innova / Avanza</p>
+          <p class="fleet-card__capacity fleet-card__capacity--passenger">6-8 penumpang</p>
+        </div>
+        <div class="fleet-card" data-category="passenger">
+          <span class="fleet-card__badge fleet-card__badge--passenger">Penumpang</span>
+          <div class="fleet-card__icon">🚌</div>
+          <h3 class="fleet-card__name">Mini Bus / Elf</h3>
+          <p class="fleet-card__models">Isuzu Elf / Toyota Hiace</p>
+          <p class="fleet-card__capacity fleet-card__capacity--passenger">15 penumpang</p>
+        </div>
+        <div class="fleet-card" data-category="passenger">
+          <span class="fleet-card__badge fleet-card__badge--passenger">Penumpang</span>
+          <div class="fleet-card__icon">🚌</div>
+          <h3 class="fleet-card__name">Bus</h3>
+          <p class="fleet-card__models">Bus Pariwisata / Reguler</p>
+          <p class="fleet-card__capacity fleet-card__capacity--passenger">30-60 penumpang</p>
+        </div>
+        <div class="fleet-card" data-category="logistics">
+          <span class="fleet-card__badge fleet-card__badge--logistics">Logistik</span>
+          <div class="fleet-card__icon">🛻</div>
+          <h3 class="fleet-card__name">Pick up</h3>
+          <p class="fleet-card__models">Mitsubishi L300 / Carry</p>
+          <p class="fleet-card__capacity fleet-card__capacity--logistics">1-2 ton</p>
+        </div>
+        <div class="fleet-card" data-category="logistics">
+          <span class="fleet-card__badge fleet-card__badge--logistics">Logistik</span>
+          <div class="fleet-card__icon">📦</div>
+          <h3 class="fleet-card__name">Mobil Box</h3>
+          <p class="fleet-card__models">Box Engkel / Double</p>
+          <p class="fleet-card__capacity fleet-card__capacity--logistics">3-5 ton</p>
+        </div>
+        <div class="fleet-card" data-category="logistics">
+          <span class="fleet-card__badge fleet-card__badge--logistics">Logistik</span>
+          <div class="fleet-card__icon">🚚</div>
+          <h3 class="fleet-card__name">Truk Logistik</h3>
+          <p class="fleet-card__models">Fuso / Hino / Wingbox</p>
+          <p class="fleet-card__capacity fleet-card__capacity--logistics">8-20 ton</p>
+        </div>
+      </div>
+
+      <div class="quote-form">
+        <h2 class="quote-form__title">Request Quote</h2>
+        <p class="quote-form__desc">Isi formulir berikut dan tim kami akan menghubungi Anda segera.</p>
+        <form id="quote-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <input type="text" name="nama" class="form-input" placeholder="Nama Lengkap" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="telepon" class="form-input" placeholder="No. WhatsApp / Telepon" required>
+            </div>
+            <div class="form-group">
+              <select name="kendaraan" class="form-select" required>
+                <option value="" disabled selected>Pilih Kendaraan</option>
+                <option value="Sedan">Sedan</option>
+                <option value="MPV">MPV</option>
+                <option value="Mini Bus / Elf">Mini Bus / Elf</option>
+                <option value="Bus">Bus</option>
+                <option value="Pick up">Pick up</option>
+                <option value="Mobil Box">Mobil Box</option>
+                <option value="Truk Logistik">Truk Logistik</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="date" name="tanggal" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="asal" class="form-input" placeholder="Kota Asal" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="tujuan" class="form-input" placeholder="Kota Tujuan" required>
+            </div>
+            <div class="form-group form-group--full">
+              <textarea name="catatan" class="form-textarea" placeholder="Catatan Tambahan (opsional)"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--gold" style="margin-top:1.5rem">✈️ Kirim via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo"><div class="logo__icon">SRG</div><span class="logo__text">PT Sejahtera<br>Raya Grup</span></a>
+          <p>Perusahaan terintegrasi layanan profesional dan komersial dengan empat pilar bisnis utama.</p>
+        </div>
+        <div><h4 class="footer__heading">Navigasi</h4><ul class="footer__links"><li><a href="index.html">Beranda</a></li><li><a href="kontak.html">Kontak</a></li></ul></div>
+        <div><h4 class="footer__heading">Layanan</h4><ul class="footer__links"><li><a href="consulting.html">Seraya Consulting</a></li><li><a href="organizer.html">Seraya Organizer</a></li><li><a href="transportation.html">Seraya Transportation</a></li><li><a href="construction.html">Seraya Construction</a></li></ul></div>
+        <div><h4 class="footer__heading">Kontak</h4><ul class="footer__links"><li>+62 812 3456 7893</li><li>transport@serayagroup.com</li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>&copy; 2026 PT Sejahtera Raya Grup. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

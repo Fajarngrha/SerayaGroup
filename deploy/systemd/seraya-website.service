@@ -1,0 +1,22 @@
+[Unit]
+Description=PT Sejahtera Raya Grup - Corporate Website
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/seraya-website
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+Environment=PORT=3000
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+
+# Keamanan dasar
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

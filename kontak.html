@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hubungi PT Sejahtera Raya Grup. Kontak per unit bisnis via WhatsApp atau email.">
+  <title>Kontak | PT Sejahtera Raya Grup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <div class="logo__icon">SRG</div>
+        <span class="logo__text">PT Sejahtera<br>Raya Grup</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Beranda</a>
+        <a href="index.html#tentang" class="nav__link">Tentang Kami</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Layanan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a href="consulting.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#2563eb"></span> Seraya Consulting</a>
+            <a href="organizer.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#9333ea"></span> Seraya Organizer</a>
+            <a href="transportation.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#16a34a"></span> Seraya Transportation</a>
+            <a href="construction.html" class="nav__dropdown-item"><span class="nav__dropdown-dot" style="background:#eab308"></span> Seraya Construction</a>
+          </div>
+        </div>
+        <a href="kontak.html" class="nav__link active">Kontak</a>
+      </nav>
+      <a href="kontak.html" class="btn btn--gold">Hubungi Kami</a>
+    </div>
+  </header>
+
+  <div class="contact-hero">
+    <div class="container">
+      <h1 class="contact-hero__title">Siap Membantu Anda</h1>
+      <p class="contact-hero__desc">Tim profesional kami siap membantu Anda. Pilih unit bisnis yang sesuai dan kami akan merespons dalam waktu singkat.</p>
+    </div>
+  </div>
+
+  <div class="container contact-grid">
+    <div class="contact-units">
+      <h2 class="contact-units__title">Kontak Per Unit Bisnis</h2>
+
+      <div class="unit-contact-card">
+        <div class="unit-contact-card__info">
+          <span class="nav__dropdown-dot" style="background:#2563eb"></span>
+          <span class="unit-contact-card__name">Seraya Consulting</span>
+        </div>
+        <div class="unit-contact-card__actions">
+          <a href="https://wa.me/6281234567891" target="_blank" title="WhatsApp">💬</a>
+          <a href="mailto:consulting@serayagroup.com" title="Email">✉️</a>
+        </div>
+      </div>
+
+      <div class="unit-contact-card">
+        <div class="unit-contact-card__info">
+          <span class="nav__dropdown-dot" style="background:#9333ea"></span>
+          <span class="unit-contact-card__name">Seraya Organizer</span>
+        </div>
+        <div class="unit-contact-card__actions">
+          <a href="https://wa.me/6281234567892" target="_blank" title="WhatsApp">💬</a>
+          <a href="mailto:organizer@serayagroup.com" title="Email">✉️</a>
+        </div>
+      </div>
+
+      <div class="unit-contact-card">
+        <div class="unit-contact-card__info">
+          <span class="nav__dropdown-dot" style="background:#16a34a"></span>
+          <span class="unit-contact-card__name">Seraya Transportation</span>
+        </div>
+        <div class="unit-contact-card__actions">
+          <a href="https://wa.me/6281234567893" target="_blank" title="WhatsApp">💬</a>
+          <a href="mailto:transport@serayagroup.com" title="Email">✉️</a>
+        </div>
+      </div>
+
+      <div class="unit-contact-card">
+        <div class="unit-contact-card__info">
+          <span class="nav__dropdown-dot" style="background:#eab308"></span>
+          <span class="unit-contact-card__name">Seraya Construction</span>
+        </div>
+        <div class="unit-contact-card__actions">
+          <a href="https://wa.me/6281234567894" target="_blank" title="WhatsApp">💬</a>
+          <a href="mailto:construction@serayagroup.com" title="Email">✉️</a>
+        </div>
+      </div>
+
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <span class="contact-info-item__icon">📍</span>
+          <span class="contact-info-item__text">Jalan Permara Visio 6 No.1, Manyar, Kabupaten Gresik, 61151, Indonesia</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-item__icon">📞</span>
+          <span class="contact-info-item__text">081932699944</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-item__icon">✉️</span>
+          <span class="contact-info-item__text">sejahterarayagrup168@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h2 class="contact-form-wrap__title">Kirim Pesan</h2>
+      <form id="contact-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <input type="text" name="nama" class="form-input" placeholder="Nama Lengkap" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-input" placeholder="Alamat Email" required>
+          </div>
+          <div class="form-group form-group--full">
+            <input type="tel" name="telepon" class="form-input" placeholder="No. WhatsApp / Telepon" required>
+          </div>
+          <div class="form-group form-group--full">
+            <select name="unit" class="form-select" required style="border-color:var(--color-gold)">
+              <option value="" disabled selected>Pilih Unit Bisnis</option>
+              <option value="consulting">Seraya Consulting</option>
+              <option value="organizer">Seraya Organizer</option>
+              <option value="transportation">Seraya Transportation</option>
+              <option value="construction">Seraya Construction</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <textarea name="pesan" class="form-textarea" placeholder="Tulis pesan atau pertanyaan Anda..." required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full" style="margin-top:1.5rem">✈️ Kirim via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo"><div class="logo__icon">SRG</div><span class="logo__text">PT Sejahtera<br>Raya Grup</span></a>
+          <p>Perusahaan terintegrasi layanan profesional dan komersial dengan empat pilar bisnis utama.</p>
+        </div>
+        <div><h4 class="footer__heading">Navigasi</h4><ul class="footer__links"><li><a href="index.html">Beranda</a></li><li><a href="kontak.html">Kontak</a></li></ul></div>
+        <div><h4 class="footer__heading">Layanan</h4><ul class="footer__links"><li><a href="consulting.html">Seraya Consulting</a></li><li><a href="organizer.html">Seraya Organizer</a></li><li><a href="transportation.html">Seraya Transportation</a></li><li><a href="construction.html">Seraya Construction</a></li></ul></div>
+        <div><h4 class="footer__heading">Kontak</h4><ul class="footer__links"><li>Jl. Permara Visio 6 No.1, Manyar, Kabupaten Gresik, 61151, Indonesia</li><li>+6281932699944</li><li>Sejahterarayagrup168@gmail.com</li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>&copy; 2026 PT Sejahtera Raya Grup. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

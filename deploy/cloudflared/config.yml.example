@@ -1,0 +1,22 @@
+# Cloudflare Tunnel - contoh konfigurasi
+# Salin ke: /home/pi/.cloudflared/config.yml
+#
+# Ganti:
+#   - TUNNEL-UUID        → UUID tunnel Anda (dari: cloudflared tunnel list)
+#   - credentials-file   → path file credentials tunnel
+#   - hostname           → domain Anda (mis. www.serayagroup.com)
+
+tunnel: TUNNEL-UUID
+credentials-file: /home/pi/.cloudflared/TUNNEL-UUID.json
+
+ingress:
+  # Domain utama
+  - hostname: www.serayagroup.com
+    service: http://127.0.0.1:3000
+
+  # Domain tanpa www (opsional, arahkan ke www)
+  - hostname: serayagroup.com
+    service: http://127.0.0.1:3000
+
+  # Wajib: catch-all rule (harus paling bawah)
+  - service: http_status:404
