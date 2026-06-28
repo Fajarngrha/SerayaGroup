@@ -4,7 +4,7 @@
 
 set -e
 
-APP_DIR="/home/fajar/seraya/SerayaGroup"
+APP_DIR="/home/fajar/SerayaGroup"
 SERVICE="seraya-website"
 
 echo "=== Fix Deploy Seraya Website ==="
