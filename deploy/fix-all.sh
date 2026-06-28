@@ -51,7 +51,7 @@ grep -q "^PORT=" .env 2>/dev/null && sed -i "s/^PORT=.*/PORT=$PORT/" .env || ech
 grep -q "^HOST=" .env 2>/dev/null && sed -i "s/^HOST=.*/HOST=127.0.0.1/" .env || echo "HOST=127.0.0.1" >> .env
 
 # Buat service dengan path yang benar
-sed -e "s|/home/fajar/seraya/SerayaGroup|$APP_DIR|g" \
+sed -e "s|/home/fajar/SerayaGroup|$APP_DIR|g" \
     -e "s|User=fajar|User=$PI_USER|g" \
     -e "s|Group=fajar|Group=$PI_USER|g" \
     "$APP_DIR/deploy/systemd/seraya-website.service" \
@@ -86,10 +86,10 @@ ingress:
   - hostname: fid-maintenance.online
     service: http://127.0.0.1:3001
 
-  - hostname: seraya-group.online
+  - hostname: sejahterarayagrup.com
     service: http://127.0.0.1:3000
 
-  - hostname: www.seraya-group.online
+  - hostname: www.sejahterarayagrup.com
     service: http://127.0.0.1:3000
 
   - service: http_status:404

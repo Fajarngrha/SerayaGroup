@@ -8,14 +8,14 @@ const isProd = process.env.NODE_ENV === 'production';
 
 app.disable('x-powered-by');
 
+app.get('/health', (_req, res) => {
+  res.json({ status: 'ok', service: 'seraya-website' });
+});
+
 app.use(express.static(path.join(__dirname), {
   maxAge: isProd ? '1d' : 0,
   etag: true
 }));
-
-app.get('/health', (_req, res) => {
-  res.json({ status: 'ok', service: 'seraya-website' });
-});
 
 app.get('*', (req, res) => {
   const file = path.join(__dirname, req.path === '/' ? 'index.html' : req.path);

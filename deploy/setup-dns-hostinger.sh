@@ -2,7 +2,7 @@
 # Setup DNS manual — record untuk Hostinger hPanel
 # Jalankan: bash deploy/setup-dns-hostinger.sh
 
-DOMAIN="seraya-group.online"
+DOMAIN="sejahterarayagrup.com"
 TUNNEL_ID="6bed7d36-e77d-4651-94ed-24efde5485b1"
 CNAME_TARGET="${TUNNEL_ID}.cfargotunnel.com"
 

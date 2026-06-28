@@ -1,5 +1,5 @@
 # Panduan Detail: Cloudflare + Hostinger
-## Domain: seraya-group.online
+## Domain: sejahterarayagrup.com
 
 ---
 
@@ -8,7 +8,7 @@
 ```
 Pengunjung
     ↓
-seraya-group.online (DNS)
+sejahterarayagrup.com (DNS)
     ↓
 Cloudflare Tunnel (web-pi)
     ↓
@@ -41,7 +41,7 @@ Domain **tetap di Hostinger**, DNS di-manage **Cloudflare**.
 ## A1. Daftar domain di Cloudflare
 
 1. Buka https://dash.cloudflare.com → Login
-2. Klik **Add a site** → ketik `seraya-group.online` → **Continue**
+2. Klik **Add a site** → ketik `sejahterarayagrup.com` → **Continue**
 3. Pilih plan **Free** → **Continue**
 4. Skip review DNS → **Continue**
 5. **Catat 2 nameserver** Cloudflare, contoh:
@@ -56,7 +56,7 @@ Domain **tetap di Hostinger**, DNS di-manage **Cloudflare**.
 
 1. Login **hPanel**: https://hpanel.hostinger.com
 2. Menu **Domains** (kiri)
-3. Klik domain **seraya-group.online**
+3. Klik domain **sejahterarayagrup.com**
 4. Buka tab **DNS** atau **DNS / Nameservers**
 5. Klik **Change nameservers** / **Ganti nameserver**
 6. Pilih **Use custom nameservers** (bukan Hostinger default)
@@ -84,7 +84,7 @@ ns2.hostinger.com
 
 ### Verifikasi
 ```bash
-nslookup -type=NS seraya-group.online
+nslookup -type=NS sejahterarayagrup.com
 ```
 Harus muncul `cloudflare.com`.
 
@@ -95,19 +95,19 @@ Harus muncul `cloudflare.com`.
 Setelah domain **Active** di Cloudflare:
 
 ```bash
-cloudflared tunnel route dns web-pi seraya-group.online
-cloudflared tunnel route dns web-pi www.seraya-group.online
+cloudflared tunnel route dns web-pi sejahterarayagrup.com
+cloudflared tunnel route dns web-pi www.sejahterarayagrup.com
 sudo systemctl restart cloudflared
 ```
 
 Output **benar**:
 ```
-Added CNAME seraya-group.online which will route to this tunnel
+Added CNAME sejahterarayagrup.com which will route to this tunnel
 ```
 
 Output **salah** (domain belum Active):
 ```
-seraya-group.online.fid-maintenance.online is already configured
+sejahterarayagrup.com.fid-maintenance.online is already configured
 ```
 → Ulangi A1–A2.
 
@@ -116,7 +116,7 @@ seraya-group.online.fid-maintenance.online is already configured
 
 | Type | Name | Content | Proxy |
 |------|------|---------|-------|
-| CNAME | seraya-group.online | 6bed7d36...cfargotunnel.com | Proxied ☁️ |
+| CNAME | sejahterarayagrup.com | 6bed7d36...cfargotunnel.com | Proxied ☁️ |
 | CNAME | www | 6bed7d36...cfargotunnel.com | Proxied ☁️ |
 
 ---
@@ -133,10 +133,10 @@ ingress:
   - hostname: fid-maintenance.online
     service: http://127.0.0.1:3001
 
-  - hostname: seraya-group.online
+  - hostname: sejahterarayagrup.com
     service: http://127.0.0.1:3000
 
-  - hostname: www.seraya-group.online
+  - hostname: www.sejahterarayagrup.com
     service: http://127.0.0.1:3000
 
   - service: http_status:404
@@ -157,7 +157,7 @@ Tanpa pindah nameserver. Set DNS manual di hPanel.
 ## B1. Buka DNS Zone di Hostinger
 
 1. Login https://hpanel.hostinger.com
-2. **Domains** → **seraya-group.online**
+2. **Domains** → **sejahterarayagrup.com**
 3. Tab **DNS** / **DNS Zone** / **Manage DNS records**
 
 Tampilan hPanel (kurang lebih):
@@ -213,13 +213,13 @@ Klik **Add Record** / **Simpan**.
 ## B4. Jika CNAME @ tidak bisa
 
 ### Solusi 1 — Pakai www saja
-Akses website via: `https://www.seraya-group.online`
+Akses website via: `https://www.sejahterarayagrup.com`
 
 ### Solusi 2 — Redirect di Hostinger
 1. hPanel → **Domains** → **Redirects**
 2. Tambah redirect:
-   - **From:** `seraya-group.online`
-   - **To:** `https://www.seraya-group.online`
+   - **From:** `sejahterarayagrup.com`
+   - **To:** `https://www.sejahterarayagrup.com`
    - **Type:** Permanent (301)
 
 ### Solusi 3 — Pindah ke Cloudflare (Opsi A)
@@ -244,9 +244,9 @@ sudo systemctl restart cloudflared
 Tunggu **5–30 menit** setelah save DNS.
 
 ```bash
-nslookup seraya-group.online
-nslookup www.seraya-group.online
-curl https://www.seraya-group.online/health
+nslookup sejahterarayagrup.com
+nslookup www.sejahterarayagrup.com
+curl https://www.sejahterarayagrup.com/health
 bash deploy/verify.sh
 ```
 
@@ -254,7 +254,7 @@ bash deploy/verify.sh
 
 # PERBANDINGAN DOMAIN
 
-| | fid-maintenance.online | seraya-group.online |
+| | fid-maintenance.online | sejahterarayagrup.com |
 |---|---|---|
 | **Registrar** | ? | Hostinger |
 | **Tunnel** | web-pi (sama) | web-pi (sama) |
@@ -267,7 +267,7 @@ bash deploy/verify.sh
 | Error | Solusi |
 |-------|--------|
 | Could not resolve host | DNS belum diset / belum propagate |
-| seraya-group.online.fid-maintenance.online | Domain belum ditambah ke Cloudflare (Opsi A) |
+| sejahterarayagrup.com.fid-maintenance.online | Domain belum ditambah ke Cloudflare (Opsi A) |
 | 502 Bad Gateway | `sudo systemctl restart seraya-website` |
 | 404 Cloudflare | Cek ingress di config.yml |
 
@@ -277,10 +277,10 @@ bash deploy/verify.sh
 
 ```
 [ ] curl http://127.0.0.1:3000/health → OK
-[ ] config.yml ada seraya-group.online
+[ ] config.yml ada sejahterarayagrup.com
 [ ] DNS diset (Cloudflare ATAU Hostinger)
 [ ] nslookup → cfargotunnel.com
-[ ] https://seraya-group.online/health → OK
+[ ] https://sejahterarayagrup.com/health → OK
 ```
 
 ---

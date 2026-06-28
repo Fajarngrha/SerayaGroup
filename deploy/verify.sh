@@ -2,8 +2,8 @@
 # Verifikasi status deploy Seraya Group
 # Jalankan: bash deploy/verify.sh
 
-DOMAIN="seraya-group.online"
-WWW_DOMAIN="www.seraya-group.online"
+DOMAIN="sejahterarayagrup.com"
+WWW_DOMAIN="www.sejahterarayagrup.com"
 SERAYA_PORT=3000
 OLD_PORT=3001
 
